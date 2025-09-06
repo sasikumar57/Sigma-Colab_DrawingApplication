@@ -1,0 +1,255 @@
+/*freestyle drawing code starts here*/
+
+body {
+	background-color: #e0e0d1;
+	color: black;
+}
+.container{
+float: right;
+height: 100%;
+width: 82%;
+}
+
+#boardContent {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 6px 0 #999;
+  border-radius: .35rem;
+  background-color: white;
+}
+.sidebar{
+	width: 18%;
+	float: left;
+  height: 100%;
+}
+
+.pencil{
+	width: 14px;
+	height: 14px;
+}
+.hand{
+	width: 15px;
+	height: 15px;
+}
+.arrow{
+	width: 15px;
+	height: 15px;
+}
+.icons{
+	display: block;
+}
+
+.btns {
+  align-items: center;
+  background-color: #acac86;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: default;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 2.5rem;
+  padding: calc(.875rem - 1px) calc(1.3rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 10px;
+  height: 10px;
+}
+
+.btns:hover,
+.btns:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.btns:hover {
+  transform: translateY(-1px);
+}
+
+.btns:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+.lbl{
+	font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ddl{
+	background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+select:hover{
+	box-shadow: 0 0 4px 0 indigo;
+}
+
+/*end of freestyle drawing code*/
+
+/*textbox code starts here*/
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	width: 40px;
+	height: 28px;
+	border: none;
+	cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch {
+	border-radius: 15px;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+input[type="color"]::-moz-color-swatch {
+	border-radius: 15px;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+.active {
+	background-color: #e0e9ff;
+}
+/*end of textbox code*/
+
+/*shapes code starts here*/
+.image{
+  cursor: grab;
+}
+.delbtn{
+	background-color: #acac86;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  width: 40px;
+  height: 37px;
+}
+.delbtn:hover,
+.delbtn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.delbtns:hover {
+  transform: translateY(-1px);
+}
+
+.tree-toggle{
+	background-color: #acac86;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  width: 40px;
+  height: 37px;
+}
+.tree-toggle:hover,
+.tree-toggle:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.tree-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.text-tree-toggle{
+  background-color: #acac86;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  width: 40px;
+  height: 37px;
+}
+.text-tree-toggle:hover,
+.text-tree-toggle:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.text-tree-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.tree {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  border-color: #000;
+}
+
+.tree li {
+  margin-bottom: 10px;
+}
+
+.tree ul {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.tree li:before {
+  content: "\25B6";
+  color: #000;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.tree li:last-child:before {
+  content: "\25B7";
+}
+
+.tree li:last-child ul {
+  margin-bottom: 0;
+  margin-right: 2px;
+}
+.btnshape{
+  display: flex;
+  flex-direction: column;
+}
+.fs1{
+	border: none;
+	/*margin-right: 20px;
+	border-right: 15px;*/
+}
+.fs2
+{
+  border: none;
+}
+/*end of shapes code*/
+
+
+
+
+
+

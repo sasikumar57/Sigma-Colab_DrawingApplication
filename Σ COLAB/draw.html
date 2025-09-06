@@ -1,0 +1,138 @@
+ <html>
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- textbox reference -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <!-- font style reference -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+     <!-- shapes reference -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <title>Sigma Colab</title>
+     <!-- style sheets -->
+     <link rel="stylesheet" type="text/css" href="draw_style.css">
+ </head>
+ <body>
+    <div class="container">
+        <canvas id="boardContent"></canvas>
+    </div>
+    <div class="sidebar">
+        &nbsp;
+        <button class="btns" style="width: 60px;" id="clearbtn" type="button" value="Clear" onclick="clearCanvas()" title="Clear all">Clear</button>
+        &nbsp;
+        <button class="btns" style="width: 80px;" type="button" value="Download" onclick="downLoad()">Download</button><br><br>
+        &nbsp;
+        <label class="lbl">Select Color </label> <input type="color" id="colorPicker">
+        <br><br>
+        &nbsp;
+        <label for="lineWidth" class="lbl">Select Line Width</label> 
+        <select class="ddl" id="lineWidth">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+           <option value="11">11</option>
+           <option value="12">12</option>
+           <option value="13">13</option>
+           <option value="14">14</option>
+           <option value="15">15</option>
+       </select><br><br>
+       &nbsp;
+       <button class="btns" onclick="pencilclick()"><img src="images/pencil.png" class="pencil" ></button>
+       &nbsp; 
+       <button class="btns" onclick="handclick()"><img src="images/hand.png" class="hand" ></button>
+       &nbsp;
+       <button class="btns" onclick="arrowclick()"><img src="images/arrow.png" class="arrow" ></button>
+       &nbsp;
+       <button class="btns" ><img src="images/trash.svg" class="trash" ></button><br>
+       <hr>
+       <!-- textbox code starts here -->
+       <div class="options">
+           &nbsp;
+           <button id="textbut" class="btns" style="width: 100px;" draggable="true">Text Box</button>&nbsp;
+           <br>
+              <br>
+              &nbsp;
+              <label class="lbl">Font Family</label>
+              <select id="fontName" class="ddl">
+                <option value="Times New Roman" selected="selected">Times New Roman</option>
+                <option value="Arial">Arial</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="cursive">cursive</option>
+            </select>
+            <br><br>
+            &nbsp;
+            <label class="lbl">Font Size</label>
+            <select id="fontSize" class="ddl">
+                <option value="10" selected="selected">10</option>                
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+            </select>
+            <br><br>
+            <div class="input-wrapper">
+               &nbsp;
+               <label for="foreColor" class="lbl">Font Color</label>
+               <input type="color" id="foreColor" class="adv-option-button" />
+           </div>
+      </div>
+      <hr>
+      <!-- end of textbox code -->
+      <!-- shapes code starts here -->
+      <div id="shapes" style="display: inline;" class="btnshape">
+        <label class="lbl">Shapes </label>
+        <button class="tree-toggle">
+            <lord-icon
+            src="https://cdn.lordicon.com/wgwcqouc.json"
+            trigger="morph"
+            colors="primary:#121331,secondary:#08a88a"
+            stroke="40"
+            style="width: 25px;height: 25px;">
+        </lord-icon>
+    </button>
+    &nbsp;
+    <button class="delbtn" onclick="deleteShape()">
+        <lord-icon
+        src="https://cdn.lordicon.com/kfzfxczd.json"
+        trigger="hover"
+        colors="primary:#121331"
+        style="width: 22px;height: 22px;">
+    </lord-icon>
+</button>
+<ul class="tree" id="tree-view" style="display: none;">
+    <fieldset class="fs1">
+        <div class="image">
+            <img src="images/circle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'circle')"> 
+            <img src="images/rectangle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'rectangle')">
+            <img src="images/oval.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'oval')">
+            <img src="images/square.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'square')">
+            <img src="images/parallelogram.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'parallelogram')"><br>
+            <img src="images/trapezoid.png" height="20px" width="20px"  draggable="true" ondragstart="dragShape(event, 'trapezoid')"/>
+            <img src="images/diamond.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'diamond')">
+            <img src="images/triangle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'triangle')">
+            <img src="images/pentagon.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'pentagon')">
+            <img src="images/hexagon.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'hexagon')"><br>
+            <img src="images/star.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'star')">
+            <img src="images/arrow-left.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'arrow-left')">
+            <img src="images/right-arrow.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'arrow-right')">
+            <img src="images/line.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'line')">
+            <img src="images/rhombus.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'rhombus')"><br>
+        </div>
+    </fieldset>
+</ul>
+</div>
+<br>
+<script type="text/javascript" src="sigmacolab.js"></script>
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<!-- end of shapes code -->
+</div>
+<!--end of sidebar -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="shape_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <fieldset class="fs">
+    <button onclick="deleteShape()">
+      <lord-icon
+      src="https://cdn.lordicon.com/kfzfxczd.json"
+      trigger="hover"
+      colors="primary:#121331"
+      style="width: 25px;height: 25px;">
+      
+    </lord-icon>
+    
+  </button><br>
+
+  <div id="shapes" class="btn">
+    
+    
+    <button class="tree-toggle">
+
+      <lord-icon
+      src="https://cdn.lordicon.com/wgwcqouc.json"
+      trigger="morph"
+      colors="primary:#121331,secondary:#08a88a"
+      stroke="40"
+      style="width: 25px;height: 25px;">
+    </lord-icon>
+
+  </button>
+  <ul class="tree" id="tree-view" style="display: none;">
+    <fieldset class="fs1">
+      <div class="image">
+        <img src="images/circle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'circle')"> 
+        <img src="images/rectangle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'rectangle')">
+        <img src="images/oval.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'oval')">
+        <img src="images/square.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'square')">
+        <img src="images/parallelogram.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'parallelogram')"><br>
+        <img src="images/trapezoid.png" height="20px" width="20px"  draggable="true" ondragstart="dragShape(event, 'trapezoid')"/>
+        <img src="images/diamond.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'diamond')">
+        <img src="images/triangle.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'triangle')">
+        <img src="images/pentagon.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'pentagon')">
+        <img src="images/hexagon.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'hexagon')"><br>
+        <img src="images/star.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'star')">
+        <img src="images/arrow-left.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'arrow-left')">
+        <img src="images/right-arrow.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'arrow-right')">
+        <img src="images/line.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'line')">
+        <img src="images/rhombus.png" height="20px" width="20px" draggable="true" ondragstart="dragShape(event, 'rhombus')"><br>        
+      </fieldset>
+    </div>  
+  </ul>
+</div><br>
+
+</fieldset>
+<canvas id="canvas" width="600" height="400"></canvas>
+
+<script src="shape_script.js"> </script>
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+</body>
+</html>
+

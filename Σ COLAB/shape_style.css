@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  #canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+    cursor: grabbing;
+  }
+
+  #canvas {
+    border: 1px solid #000000;
+  }
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  .circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: grab;
+    }
+    
+    /* Rectangle Button */
+    .rectangle {
+    width: 60px;
+    height: 45px;
+    border-radius: 5px;
+    cursor:grab;
+    }
+    
+    
+    /* Trapezoid Button */
+    .trapezoid {
+        border-bottom: 50px solid #555;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        height: 0;
+        width: 125px;
+    cursor: grab;
+    }
+    
+    /* Parallelogram Button */
+    .parallelogram {
+      width: 65px;
+      height: 35px;
+      transform: skew(20deg);
+    cursor: grab;
+    }
+    /* Oval Button */
+    .oval {
+    height: 35px;
+    width: 70px;
+    border-radius: 50%;
+    cursor: grab;
+    size: 5px;
+    }
+      .square {
+        width: 50px;
+        height: 50px;
+        background-color:#000;
+        border-color: black;
+        border-radius: 12px;
+        cursor: grab;
+      }
+
+  .delete-button i {
+    margin-right: 5px;
+  }
+  .tree {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    border-color: #000;
+    }
+    
+    .tree li {
+    margin-bottom: 10px;
+    }
+    
+    .tree ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    }
+    
+    .tree li:before {
+    content: "\25B6";
+    color: #000;
+    display: inline-block;
+    margin-right: 5px;
+    }
+    
+    .tree li:last-child:before {
+    content: "\25B7";
+    }
+    
+    .tree li:last-child ul {
+    margin-bottom: 0;
+    }
+  .btn{
+    display: flex;
+    flex-direction: column;
+  }
+  .fs{
+    width: 5%;
+    border-radius: 12pt;
+    border-color: #000;
+    margin-top: 100px;
+    margin-left: 25px;
+    
+    }
+    .fs1{
+    border-radius: 10pt;
+    border-color: #000;
+    }
+    .image{
+      
+      cursor: grab;
+    }
